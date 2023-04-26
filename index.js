@@ -27,5 +27,8 @@ export default function solution(content) {
 
   console.log(`Humidity: Min: ${minHumidity}, Max: ${maxHumidity}`);
 
+  const collection = data.map((row) => row.split(','));
+  const hottestTemp = _.max(collection, (row) => row[1]);
+  console.log(`HottestDay: ${hottestTemp[0]} ${hottestTemp[7]}`);
   // END
 }
